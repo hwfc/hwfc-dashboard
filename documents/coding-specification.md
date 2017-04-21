@@ -54,7 +54,7 @@ function Book(title, author) {
 }
 ```
 
-## 二、HTML/CSS编写规范         
+## 二、HTML规范         
 
 #### 1. 协议引入         
 当引入图片或者其他媒体文件时，url所指向的具体路径中不需要指定协议，除非不是http或https协议。         
@@ -133,8 +133,7 @@ aria-*，role
 <img class="avatar" src="...">
 ```
 
-## 三、CSS规范         
- - 用两个空格来代替制表符（tab） -- 这是唯一能保证在所有环境下获得一致展现的方法。         
+## 三、CSS规范             
  - 为选择器分组时，将单独的选择器单独放在一行。         
  - 为了代码的易读性，在每个声明块的左花括号前添加一个空格。         
  - 声明块的右花括号应当单独成行。         
@@ -175,7 +174,7 @@ aria-*，role
 2. Box model         
 3. Typographic         
 4. Visual         
-完整的属性列表及其排列顺序请参考 Recess         
+...          
          
 ```
 .declaration-order {
