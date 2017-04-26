@@ -6,16 +6,17 @@ hwfc项目是Hello World Football Club官方网站。 该网站可用来向用�
 开发时前后端分离：[前端源码](https://github.com/hwfc/hwfc-client) [后端源码](https://github.com/hwfc/hwfc-server)       
 
 ## 项目成员       
- - 李为 tel:  18826072459 email: 123653079@qq.com                           
- - 欧光文 tel: 18475782669 email:ougwen1235@163.com                           
- - 邓杰友 tel：15622243216 email：                  
+ - 李为 tel: 18826072459, email: 123653079@qq.com, github:[https://github.com/Liveipool](https://github.com/Liveipool)            
+ - 欧光文 tel: 18475782669, email: ougwen1235@163.com, github:[https://github.com/ougwen1235](https://github.com/ougwen1235)           
+ - 邓杰友 tel：15622243216, email：jeyoteng@gmail.com, github:[https://github.com/Crazytinal](https://github.com/Crazytinal)                
+ - 胡弘康 tel：18819253591, email：codeforsomeone@gmail.com, github:[https://github.com/huhk-sysu](https://github.com/huhk-sysu) 
 
 ## 文档       
  - [需求文档](./documents/requirements-documentation.md)        
  - [编码规范](./documents/coding-specification.md)       
 
-## 设计图
-链接: https://pan.baidu.com/s/1c1K9k68 密码: 22k6
+## 资源文件     
+ - [v1_04_26](https://pan.baidu.com/s/1c1K9k68) 密码: 22k6    
 
 ## 任务说明       
 
