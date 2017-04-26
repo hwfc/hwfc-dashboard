@@ -14,6 +14,7 @@ hwfc项目是Hello World Football Club官方网站。 该网站可用来向用�
 ## 文档       
  - [需求文档](./documents/requirements-documentation.md)        
  - [编码规范](./documents/coding-specification.md)       
+ - [API](./documents/api.md)       
 
 ## 资源文件     
  - [v1_04_26](https://pan.baidu.com/s/1c1K9k68) 密码: 22k6    
