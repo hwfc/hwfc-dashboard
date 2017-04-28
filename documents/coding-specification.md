@@ -5,25 +5,25 @@
 #### 1. 使用2个空格符缩进         
 建议使用2个空格符进行缩进，不要使用tab，因为当在不同的环境或者说是编辑器当中，只有使用2个空格符才能保障在所有环境下具有一致的表现。         
 
-#### 2. 文件/资源命名         
-我们的文件命名需要遵循统一的命名规定，以可读性而言采用（-）减号来分隔文件名。确保文件名总是以字母开头而不是数字，且尽量都使用小写字母，因为在大小写敏感的操作系统中有可能会参数异常且难以察觉         
-不推荐：         
+#### 2. 文件命名         
+采用（-）横线分隔来命名       
 
-```
-MyScript.js
-myScript.js
-100Script.js
-my-file-min.css
-```
-推荐：         
+如：         
 
 ```
 my-script.js
 my-camel-case-name.js
 my-file.min.css
 ```
+#### 3.组件命名
+采用小驼峰命名法，如：
 
-#### 3. 变量/函数命名规范         
+```
+home
+videosParts
+```
+
+#### 4. 变量/函数命名规范         
 变量的命名尽量采用匈牙利命名法，驼峰式书写格式，其中，函数和变量以小写字母开头，类（class）则用大写字母开头，尽量少用缩写，即便用也尽量采用常见的一些缩写（如：num = number，btn = button），常量则采用全部字母大写的书写的方式。更多内容可以参见google开源项目风格指南。对于css的书写，尽量赋予选择器以意义，不要出现没有意义的颜色、数字，应把他们与相应的意思对应起来。         
 不推荐：         
 
@@ -40,19 +40,8 @@ function btnChangeColor(color){...}
 .text-danger { color: red; }
 ```
 
-#### 4. 注释         
-编写代码时需要适当的注释用以说明文件的作者、函数的功能、甚至是某些变量值的含义等等。良好的注释可以提高代码的可读性，也便于代码维护和团队协作。我们主要使用js来编写，请仔细查看  http://usejsdoc.org/   来编写符合规范的注释。         
-例如：         
-
-```
-/**
- * Represents a book. 函数描述
- * @param {string} title - The title of the book. 参数title
- * @param {string} author - The author of the book. 参数author
- */
-function Book(title, author) {
-}
-```
+#### 5. 注释         
+无论是html、css还是js文件，尽量将注释写清楚。
 
 ## 二、HTML规范         
 
@@ -83,16 +72,7 @@ function Book(title, author) {
 }
 ```
 
-#### 2. 字符编码         
-通过明确声明字符编码，能够确保浏览器快速并容易的判断页面内容的渲染方式。这样做的好处是，可以避免在 HTML 中使用字符实体标记（character entity），从而全部与文档编码一致（一般采用 UTF-8 编码）。         
-
-```
-<head>
-  <meta charset="UTF-8">
-</head>
-```
-
-#### 3. 引入CSS和JavaScript文件         
+#### 2. 引入CSS和JavaScript文件         
 根据HTML5规范，在引入css和JavaScript文件时一般不需要制定type属性，因为text/css和text/javascript分别是他们的默认值。         
 
 ```
@@ -100,7 +80,7 @@ function Book(title, author) {
 <script src="code-guide.js"></script>
 ```
 
-#### 4. 属性顺序         
+#### 3. 属性顺序         
 HTML属性应当按照以下给出的顺序依次排列，确保代码的易读性。         
 
 ```
@@ -118,7 +98,7 @@ aria-*，role
 </a>
 ```
 
-#### 5. 减少标签的数量         
+#### 4. 减少标签的数量         
 编写HTML代码时，尽量避免多余的父元素，很多时候这需要迭代和重构来实现。         
 不推荐：         
 
@@ -208,33 +188,7 @@ aria-*，role
 }
 ```
 
-#### 2. 媒体查询（Media query）的位置
-因为我们的项目要做响应式，所以肯定会用到媒体查询。将媒体查询放在尽可能相关规则的附近，不要将他们打包放在一个单一样式文件中或者放在文档底部。如果将他们分开，容易遗忘。         
-推荐：         
-
-```
-.element { ... }
-.element-avatar { ... }
-.element-selected { ... }
-
-@media (min-width: 480px) {
-  .element { ...}
-  .element-avatar { ... }
-  .element-selected { ... }
-}
-```
-
-#### 3. 注释         
-尽可能描述出该声明的作用和意图         
-
-```
-/* Wrapping element for .modal-title and .modal-close */
-.modal-header {
-  ...
-}
-```
-
-#### 4. class命名         
+#### 2. class命名         
  - class 名称中只能出现小写字符和破折号（dashe）（不是下划线，也不是驼峰命名法）。破折号应当用于相关 class 的命名（类似于命名空间）（例如，.btn 和 .btn-danger）。         
  - 避免过度任意的简写。.btn 代表 button，但是 .s 不能表达任何意思。         
  - class 名称应当尽可能短，并且意义明确。         
@@ -248,7 +202,7 @@ aria-*，role
 .tweet-header { ... }
 ```
 
-#### 5. 选择器         
+#### 3. 选择器         
  - 对于通用元素使用 class ，这样利于渲染性能的优化。         
  - 对于经常出现的组件，避免使用属性选择器（例如，[class^="..."]）。浏览器的性能会受到这些因素的影响。         
  - 选择器要尽可能短，并且尽量限制组成选择器的元素个数，建议不要超过 3 ，太多选择器会造成性能查询上的问题。         
@@ -265,13 +219,7 @@ span { ... }
 .tweet .avatar { ... }
 ```
 
-#### 6. 代码组织         
- - 以组件为单位组织代码段。         
- - 制定一致的注释规范。         
- - 使用一致的空白符将代码分隔成块，这样利于扫描较大的文档。                  
- - 如果使用了多个 CSS 文件，将其按照组件而非页面的形式分拆，因为页面会被重组，而组件只会被移动。         
-
-#### 7. id 还是 class         
+#### 4. id 还是 class         
  - class应该应用于概念上相似的元素，这些元素可以出现在同一页面上的多个位置，而id应该应用于不同的唯一的元素。 
  - 只有在目标元素非常独特，绝不会对网站上其他地方别的东西使用这个名称时，才会使用id.         
  - 如果你认为以后可能需要相似的元素，就使用class。         
@@ -286,22 +234,3 @@ span { ... }
  - 对于html中元素的类，静态的写在class中，动态的使用:class设定。         
  - 如果使用UI插件，尽量在具体的页面中引用某个需要的组件，而不是在全局引用。         
 
-#### 2. 命名         
- - 组件文件名、html模板中均使用kebab-case格式。即以-分隔，全小写。在components里注册组件的时候，也使用kebab-case格式。         
- - 事件的命名与组件命名风格一致，且以所在组件的名称作为前缀。例如main-page.vue里面有一个表格，可以命名为main-page-table.vue         
-
-#### 3. 文件组织         
-
-```
-src/api：存放http请求相关函数。
-src/assets：存放需要的一些资源。
-src/components：存放子组件。
-src/pages：存放具体页面。
-src/router：存放路由信息，在index.js里引用。
-src/style：存放通用型的css，在某些组件或者业务里使用import引入。
-src/utils：工具文件夹-封装的可复用的方法、功能。
-```
-以上文件夹中可以视需要建立子文件夹，方便管理。         
-Commit Message相关规范         
-[http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)         
-To be done....         
