@@ -127,20 +127,12 @@ Response Properties:
 
 | Property | Description | Type |
 |----------|-------------|------|
-|videos|热点视频对象的数组|object array|
-|video.cover|热点视频的封面链接|string|
-|video.url|热点视频的链接|string|
+|url|两个热点视频的链接数组|string array|
 
 Response Example:
 
 ```json
 {
-    "videos": [{
-      "cover": "someurl",
-      "url": "someurl"
-    },{
-      "cover": "someurl",
-      "url": "someurl"
-    }]
+    "url": ["someurl", "someurl"]
 }
 ```
