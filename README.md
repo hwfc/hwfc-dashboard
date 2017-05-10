@@ -12,9 +12,10 @@ hwfc项目是Hello World Football Club官方网站。 该网站可用来向用�
  - 胡弘康 tel：18819253591, email：codeforsomeone@gmail.com, github:[https://github.com/huhk-sysu](https://github.com/huhk-sysu) 
 
 ## 文档       
+ - [数据模型](./documents/data-models.md)        
  - [需求文档](./documents/requirements-documentation.md)        
  - [编码规范](./documents/coding-specification.md)       
- - [API](./documents/api.md)       
+ - [API](./documents/api.md)      
 
 ## 资源文件     
  - [v1_04_26](https://pan.baidu.com/s/1c1K9k68) 密码: 22k6    
