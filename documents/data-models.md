@@ -2,7 +2,7 @@
 
 #### 首页热图（v1）     
 
-``` json
+``` javascript
 {
   "_id": String,
   "url": [String]
@@ -11,7 +11,7 @@
 
 #### 首页最新预告（v1）     
 
-``` json
+``` javascript
 {
   "_id": String,
   "time": String,
@@ -21,11 +21,11 @@
 
 #### 首页最新文章（v1）     
 
-``` json
+``` javascript
 {
   "_id": String,
   "title": String,
-    "upload_time": Date,
+  "upload_time": Date,
   "author": String,
   "brief": String
 }
@@ -33,7 +33,7 @@
 
 #### 首页热点视频（v1）      
 
-``` json
+``` javascript
 {
   "_id": String,
   "url": [String]
