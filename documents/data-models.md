@@ -5,7 +5,7 @@
 ``` json
 {
   "_id": String,
-  "url": String Array
+  "url": [String]
 }
 ```
 
@@ -25,7 +25,7 @@
 {
   "_id": String,
   "title": String,
-  "upload_time": String,
+    "upload_time": Date,
   "author": String,
   "brief": String
 }
@@ -36,6 +36,6 @@
 ``` json
 {
   "_id": String,
-  "url": String Array
+  "url": [String]
 }
 ```
