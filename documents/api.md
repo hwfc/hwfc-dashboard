@@ -11,7 +11,8 @@
   - [Essay](#Essay)
     - [获取所有文章](#获取所有文章)
     - [获取最新文章](#获取最新文章)
-    - [上传新文章](#上传新文章)
+    - [获取特定文章](#获取特定文章)
+    - [新建文章](#新建文章)
 
 <a name="域名及ip地址"></a>
 
@@ -49,10 +50,9 @@ helloworldfc.com
 
 当成功返回时，内容将会被包裹在`data`中。
 
-```javascript
+```json
 {
-    data: {
-        // ...
+    "data": {
     }
 }
 ```
@@ -61,7 +61,23 @@ helloworldfc.com
 
 ### 错误处理
 
-编写中……
+通常情况下，会返回这样的错误信息：
+
+```json
+{
+    "status": "error",
+    "cause": "错误名称",
+    "message": "错误信息"
+}
+```
+
+偶尔会返回这样的错误信息：
+
+```json
+{
+    "err": "错误信息"
+}
+```
 
 <a name="Models"></a>
 
@@ -76,11 +92,13 @@ helloworldfc.com
 |title|文章的标题|string|
 |uploadTime|文章的上传时间|string|
 |author|文章的作者|string|
-|brief|文章的摘要|string|
+|content|文章的内容|string|
 
 <a name="获取所有文章"></a>
 
 #### 获取所有文章
+
+> 不带`content`字段，带有`brief`字段。
 
 Request URI:
 
@@ -94,20 +112,18 @@ Response Example:
 {
   "data": [
     {
-      "_id": "59182ccee6c77a6cc88f9f55",
-      "title": "如何干一名优秀的程序员",
-      "author": "liveipool",
-      "brief": "字数待定的摘要",
-      "uploadTime": "2017-05-14T10:09:18.907Z",
-      "__v": 0
+      "uploadTime": "2017-05-14T17:46:30.092Z",
+      "title": "为什么我这么机智",
+      "author": "小方",
+      "brief": "1234567890",
+      "id": "591897f61f648b1b6ca28354"
     },
     {
-      "_id": "59182d3be6c77a6cc88f9f56",
-      "title": "如何干一名优秀的程序员2",
-      "author": "liveipool2",
-      "brief": "字数待定的摘要2",
-      "uploadTime": "2017-05-14T10:11:07.310Z",
-      "__v": 0
+      "uploadTime": "2017-05-14T18:21:53.724Z",
+      "title": "你好呀",
+      "author": "hhk",
+      "brief": "666",
+      "id": "5918a04168088e32d8b526ab"
     }
   ]
 }
@@ -116,6 +132,8 @@ Response Example:
 <a name="获取最新文章"></a>
 
 #### 获取最新文章
+
+> 不带`content`字段，带有`brief`字段。
 
 Request URI:
 
@@ -128,19 +146,44 @@ Response Example:
 ```json
 {
   "data": {
-    "_id": "59182f015612b65c44664af0",
-    "title": "123123",
-    "author": "222",
-    "brief": "12312321",
-    "uploadTime": "2017-05-14T10:18:41.722Z",
-    "__v": 0
+    "uploadTime": "2017-05-14T18:21:53.724Z",
+    "title": "你好呀",
+    "author": "hhk",
+    "brief": "666",
+    "id": "5918a04168088e32d8b526ab"
   }
 }
 ```
 
-<a name="上传新文章"></a>
+<a name="获取特定文章"></a>
 
-#### 上传新文章
+#### 获取特定文章
+
+> 带有`content`字段，不带`brief`字段。
+
+Request URI:
+
+```http
+GET /api/essays/:id
+```
+
+Response Example:
+
+```json
+{
+  "data": {
+    "uploadTime": "2017-05-15T04:21:01.366Z",
+    "title": "这是一个标题",
+    "author": "我是作者",
+    "content": "文章的内容",
+    "id": "59192cad32750f6814ee98cf"
+  }
+}
+```
+
+<a name="新建文章"></a>
+
+#### 新建文章
 
 > 提交时不需要提供`uploadTime`字段，后端会自动生成。
 
@@ -156,7 +199,7 @@ Request body:
 {
     "title": "这是一个标题",
     "author": "我是作者",
-    "brief": "文章的简单介绍"
+    "content": "文章的内容"
 }
 ```
 
@@ -165,12 +208,11 @@ Response Example:
 ```json
 {
   "data": {
-    "__v": 0,
+    "uploadTime": "2017-05-15T04:21:01.366Z",
     "title": "这是一个标题",
     "author": "我是作者",
-    "brief": "文章的简单介绍",
-    "uploadTime": "2017-05-14T12:25:41.824Z",
-    "_id": "59184cc55d2d2a42f83d9524"
+    "content": "文章的内容",
+    "id": "59192cad32750f6814ee98cf"
   }
 }
 ```
