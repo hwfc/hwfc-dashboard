@@ -6,7 +6,7 @@
 - [返回对象说明](#返回对象说明)
   - [通用类状态码](#通用类状态码)（developing）
   - [成功返回](#成功返回)
-  - 错误处理（developing）
+  - [错误处理](#错误处理)（developing）
 - [Models](#Models)
   - [Essay](#Essay)
     - [获取所有文章](#获取所有文章)
